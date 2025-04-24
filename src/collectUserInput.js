@@ -1,9 +1,21 @@
 import { queueMove } from "./components/Player";
 
-document.getElementById("forward")?.addEventListener("click", () => queueMove("forward"));
-document.getElementById("backward")?.addEventListener("click", () => queueMove("backward"));
-document.getElementById("left")?.addEventListener("click", () => queueMove("left"));
-document.getElementById("right")?.addEventListener("click", () => queueMove("right"));
+document.getElementById("forward")?.addEventListener("click", (event) => {
+    event.preventDefault();
+    queueMove("forward");
+});
+document.getElementById("backward")?.addEventListener("click", (event) => {
+    event.preventDefault();
+    queueMove("backward");
+});
+document.getElementById("left")?.addEventListener("click", (event) => {
+    event.preventDefault();
+    queueMove("left");
+});
+document.getElementById("right")?.addEventListener("click", (event) => {
+    event.preventDefault();
+    queueMove("right");
+});
 
 window.addEventListener("keydown", (event) => {
     if (event.key === "ArrowUp") {

@@ -34,6 +34,18 @@ body {
   grid-column: 1 / -1
 }
 
+@media (max-width: 768px) {
+  #controls button {
+    height: 80px;
+    width: 100%
+  }
+
+  #controls div {
+    gap: 15px;
+    grid-template-columns: repeat(3, 100px);
+  }
+}
+
 #score {
   position: absolute;
   top: 20px;
